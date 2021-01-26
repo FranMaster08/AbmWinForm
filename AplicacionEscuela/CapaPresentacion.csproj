@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2719AA3C-3E6C-460E-A51A-D78E20B67104}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AplicacionEscuela</RootNamespace>
+    <AssemblyName>AplicacionEscuela</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdministrarMaterias\InsertarMateria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministrarMaterias\InsertarMateria.Designer.cs">
+      <DependentUpon>InsertarMateria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministrarMaterias\MateriasCursadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministrarMaterias\MateriasCursadas.Designer.cs">
+      <DependentUpon>MateriasCursadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministrarMaterias\RelacionarMaterias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministrarMaterias\RelacionarMaterias.Designer.cs">
+      <DependentUpon>RelacionarMaterias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministrarPersonas\AdministrarAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministrarPersonas\AdministrarAlumnos.Designer.cs">
+      <DependentUpon>AdministrarAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministrarPersonas\AdmistrarProfesores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministrarPersonas\AdmistrarProfesores.Designer.cs">
+      <DependentUpon>AdmistrarProfesores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministrarPersonas\FormularioBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministrarPersonas\AdministrarProfesores.Designer.cs">
+      <DependentUpon>FormularioBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioPrincipal.Designer.cs">
+      <DependentUpon>FormularioPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUp\InsertarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUp\InsertarAlumno.Designer.cs">
+      <DependentUpon>InsertarAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUp\InsertarProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUp\InsertarProfesor.Designer.cs">
+      <DependentUpon>InsertarProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUp\PopUpPersonasBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUp\PopUpPersonasBase.Designer.cs">
+      <DependentUpon>PopUpPersonasBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdministrarMaterias\InsertarMateria.resx">
+      <DependentUpon>InsertarMateria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministrarMaterias\MateriasCursadas.resx">
+      <DependentUpon>MateriasCursadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministrarMaterias\RelacionarMaterias.resx">
+      <DependentUpon>RelacionarMaterias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministrarPersonas\AdministrarAlumnos.resx">
+      <DependentUpon>AdministrarAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministrarPersonas\AdmistrarProfesores.resx">
+      <DependentUpon>AdmistrarProfesores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministrarPersonas\FormularioBase.resx">
+      <DependentUpon>FormularioBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioPrincipal.resx">
+      <DependentUpon>FormularioPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUp\InsertarAlumno.resx">
+      <DependentUpon>InsertarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUp\InsertarProfesor.resx">
+      <DependentUpon>InsertarProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUp\PopUpPersonasBase.resx">
+      <DependentUpon>PopUpPersonasBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capa Entidades\Capa Entidades.csproj">
+      <Project>{3B8BEDBD-9259-45A8-B297-2E8B8DF29EF5}</Project>
+      <Name>Capa Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Capa Logica\Capa Logica.csproj">
+      <Project>{A1534CD2-74CB-42B3-B5AD-10F0041A489E}</Project>
+      <Name>Capa Logica</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagenes\add.png" />
+    <Content Include="Imagenes\Alumno.png" />
+    <Content Include="Imagenes\Materias.png" />
+    <Content Include="Imagenes\Profesor.png" />
+    <Content Include="Imagenes\fondo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
